@@ -1,9 +1,10 @@
 complete: compile run clean
 run:
-	./run
+	@./final
 compile:
-	gcc -c menu.c
-	gcc -o run menu.o
-
+	@gcc -c menu.c
+	@gcc -c diagnosticapi.c
+	@gcc -c fileapi.c
+	@gcc -o final menu.o diagnosticapi.o fileapi.o
 clean:
-	rm -rf run menu.o
+	@rm -rf menu.o diagnosticapi.o fileapi.o run
