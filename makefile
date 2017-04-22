@@ -7,4 +7,4 @@ compile:
 	@gcc -c fileapi.c
 	@gcc -o final menu.o diagnosticapi.o fileapi.o
 clean:
-	@rm -rf menu.o diagnosticapi.o fileapi.o run
+	@rm -rf menu.o diagnosticapi.o fileapi.o final
