@@ -1,6 +1,15 @@
 #include "diagnosticapi.h"
 #include ""
 
+// SFS FILE STRUCTURE DEFINITION IN Bytes 
+#define  start_super_block 0 // super block size is 4KB
+#define  start_i_bitmap 4*1024 // Inode Bit Map - 4KB Size
+#define  start_d_bitmap 4*1024 + 4*1024 // Data Bit Map - 4KB Size
+#define  start_i_data 4*1024 + 4*1024 + 4*1024	// Inode Data - No of Inode* Size of Inode 
+#define  start_data 4*1024 + 4*1024 + 4*1024 +				// Rest of the defined filesystem
+
+#define  block_size 4*1024 
+
 
 int createSFS( char* filename, int nbytes) // returns a fileSystemId 
 {
